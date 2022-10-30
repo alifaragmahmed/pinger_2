@@ -9,7 +9,7 @@
 
     <style>
         * {
-            font-family: 'Montserrat', sans-serif;
+            font-family:  sans-serif !important;
         }
         #sidebar-menu ul li a {
             font-size: 16px!important;
