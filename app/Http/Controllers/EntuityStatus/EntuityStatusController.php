@@ -27,9 +27,9 @@ class EntuityStatusController extends Controller
             ],
         ];
         $lists = EntuityStatus::orderBy('id', 'desc')->paginate();
-        return view('pages.entuity-status.index', [
+        return view('pages.Entuity-Status.index', [
             'breadcrumb' => $breadcrumb,
-            'lists'     => $lists,
+            'lists'      => $lists,
         ]);
     }
 
@@ -106,7 +106,7 @@ class EntuityStatusController extends Controller
      */
     public function edit(EntuityStatus $EntuityStatus)
     {
-       
+
         $breadcrumb = [
             'title' =>  __("Edit Modal"),
             'items' =>  [
