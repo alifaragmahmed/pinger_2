@@ -88,7 +88,7 @@
                             <b class="h4" >@lang('Filter')</b>
                         </button>
                     </div>
-                    <div class="card-body " id="filter-body" style="display: none" >
+                    <div class="card-body " id="filter-body" _style="display: none" >
                         <div class="row">
 
                             <div class="col-md-4 pt-2">
@@ -310,6 +310,8 @@
         $('#filter').on('click', function() {
             $('#filter-body').slideToggle('slow');
         });
+
+        $('#filter-body').slideToggle('slow');
 
         $('.select2').select2({});
 
