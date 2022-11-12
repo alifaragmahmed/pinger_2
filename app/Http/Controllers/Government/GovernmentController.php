@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 
 class GovernmentController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-government'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-government'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-government'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-government'],['only' => ['destroy']]);
+    }
         /**
      * Display a listing of the resource.
      *
@@ -106,7 +114,7 @@ class GovernmentController extends Controller
      */
     public function edit(Government $Government)
     {
-       
+
         $breadcrumb = [
             'title' =>  __("Edit Modal"),
             'items' =>  [

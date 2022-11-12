@@ -34,7 +34,7 @@
         #branchesTable > tbody > tr > td:nth-child(34),
         #branchesTable > tbody > tr > td:nth-child(35)
         {
-            display: none   
+            display: none
         }
     </style>
 @endsection
@@ -61,7 +61,7 @@
         @endif
     </div>
     @if (auth()->user()->can('Branche_search-filter-branches'))
-        <div class="filter p-3 ">
+        <div class="filter ">
                 <div class="card">
 
                     <div class="card-body ">
@@ -80,15 +80,15 @@
         </div>
     @endif
     @if (auth()->user()->can('Branche_filter-branches'))
-        <div class="filter p-2 ">
+        <div class="filter">
             <form method="GET" action="{{ route('branches.index') }}" __onsubmit="$('#exportInput').val('0')">
                 <div class="card">
                     <div class="card-header">
-                        <button type="button" id="filter" class="btn btn-default"> <i class="fa fa-filter"></i>
+                        <button type="button" id="filter" class="btn btn-default">
                             <b class="h4" >@lang('Filter')</b>
                         </button>
                     </div>
-                    <div class="card-body " id="filter-body">
+                    <div class="card-body " id="filter-body" style="display: none" >
                         <div class="row">
 
                             <div class="col-md-4 pt-2">
@@ -224,7 +224,7 @@
                     <div class="table-responsive">
                         <table class="table project-list-table table-nowrap align-middle table-borderless" id="branchesTable">
                             <thead>
-                                <tr>
+                                <tr style="background-color: lightgray" >
                                     <th scope="col">@lang('Name')</th>
                                     <th scope="col">@lang('Project')</th>
                                     <th scope="col">@lang('Sector')</th>
@@ -373,7 +373,7 @@
                             extend: 'excelHtml5',
                             className: 'btn buttons-excel  buttons-html5 btn-primary',
                             text: 'Export',
-                        
+
                             },
                             // 'csvHtml5',
                             // 'pdfHtml5'

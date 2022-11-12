@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 
 class LineCapacityController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-line-capacity'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-line-capacity'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-line-capacity'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-line-capacity'],['only' => ['destroy']]);
+    }
    /**
      * Display a listing of the resource.
      *

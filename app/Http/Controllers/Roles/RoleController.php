@@ -10,6 +10,14 @@ use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-roles'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-roles'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-roles'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-roles'],['only' => ['destroy']]);
+    }
      /**
      * Display a listing of the resource.
      *
@@ -87,7 +95,7 @@ class RoleController extends Controller
         } catch (\Exception $th) {
             return back()->with('error', $th->getMessage());
         }
-       
+
     }
 
      /**

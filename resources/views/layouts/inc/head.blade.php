@@ -9,7 +9,7 @@
 
 
 <link href="{{ url('/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{{ url('/assets/css/w3.css') }}">
 <link href="{{ url('/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ url('/assets/libs/toastr/build/toastr.min.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ url('/assets/libs/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />

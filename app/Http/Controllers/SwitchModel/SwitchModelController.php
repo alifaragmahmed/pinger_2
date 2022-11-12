@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 
 class SwitchModelController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-switch-model'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-switch-model'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-switch-model'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-switch-model'],['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -106,7 +114,7 @@ class SwitchModelController extends Controller
      */
     public function edit(SwitchModel $SwitchModel)
     {
-       
+
         $breadcrumb = [
             'title' =>  __("Edit model"),
             'items' =>  [

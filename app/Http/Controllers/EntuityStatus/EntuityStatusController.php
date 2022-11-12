@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 
 class EntuityStatusController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-entuity-status'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-entuity-status'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-entuity-status'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-entuity-status'],['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

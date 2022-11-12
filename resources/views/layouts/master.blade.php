@@ -2,9 +2,11 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @includeIf('layouts.inc.head')
+    /*
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    */
     @yield("css")
 
     <style>
@@ -13,6 +15,14 @@
         }
         #sidebar-menu ul li a {
             font-size: 16px!important;
+        }
+
+        .feather {
+            width: 17px;
+        }
+
+        .page-content {
+            padding-top: 55px!important;
         }
     </style>
 </head>

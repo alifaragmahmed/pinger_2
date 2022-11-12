@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 
 class NetworkController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-network'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-network'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-network'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-network'],['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 
 class LineTypeController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-line-type'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-line-type'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-line-type'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-line-type'],['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

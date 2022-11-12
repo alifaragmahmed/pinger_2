@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 
 class RouterController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-router-type'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-router-type'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-router-type'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-router-type'],['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

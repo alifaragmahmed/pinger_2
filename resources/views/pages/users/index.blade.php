@@ -37,7 +37,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        {{ $list->roles()->first()->name }}
+                                        {{ optional($list->roles()->first())->name }}
                                     </td>
                                     <td>
                                         {{ $list->created_at}}

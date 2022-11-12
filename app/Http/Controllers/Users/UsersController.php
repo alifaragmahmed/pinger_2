@@ -13,6 +13,15 @@ use Spatie\Permission\Models\Role;
 
 class UsersController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-users'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-users'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-users'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-users'],['only' => ['destroy']]);
+    }
+
     public function index() {
 
         $breadcrumb = [
@@ -60,7 +69,7 @@ class UsersController extends Controller
         $user->assignRole(Role::where("id",$request->role_id)->first());
         return redirect()->route('users.index')->with('success', __("This row has been created."));
     }
-    
+
     public function edit(User $user) {
         // if($user->id == \Auth::user()->id) {
         //     return redirect()->route('profile.index');
@@ -93,6 +102,7 @@ class UsersController extends Controller
         } else {
             unset($data['password']);
         }
+        $user->roles()->detach();
         $user->update($data);
         $user->assignRole(Role::where("id",$request->role_id)->first());
         return redirect()->route('users.index')->with('success', __("This row has been updated."));
@@ -103,5 +113,5 @@ class UsersController extends Controller
         return redirect()->route('users.index')->with('success', __("This row has been deleted."));
     }
 
-    
+
 }

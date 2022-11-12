@@ -10,6 +10,15 @@ use Illuminate\Http\Request;
 
 class UpsInstaltionController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-ups-installation'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-ups-installation'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-ups-installation'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-ups-installation'],['only' => ['destroy']]);
+    }
+
      /**
      * Display a listing of the resource.
      *
@@ -106,7 +115,7 @@ class UpsInstaltionController extends Controller
      */
     public function edit(UpsInstallation $UpsInstallation)
     {
-       
+
         $breadcrumb = [
             'title' =>  __("Edit Modal"),
             'items' =>  [

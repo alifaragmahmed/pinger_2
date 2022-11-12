@@ -10,6 +10,15 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-project'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-project'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-project'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-project'],['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      *

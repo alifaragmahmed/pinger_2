@@ -10,6 +10,14 @@ use App\Models\Terminal;
 
 class TerminalsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-terminal'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-terminal'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-terminal'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-terminal'],['only' => ['destroy']]);
+    }
     public function index() {
 
         $breadcrumb = [

@@ -9,6 +9,14 @@ use App\Models\BranchLevel;
 
 class LevelController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-level'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-level'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-level'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-level'],['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

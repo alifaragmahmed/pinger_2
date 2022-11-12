@@ -26,6 +26,15 @@ use Illuminate\Support\Facades\DB;
 
 class BranchesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:Branche_read-branches'],['only' => ['index', 'show']]);
+        $this->middleware(['permission:Branche_create-branches'],['only' => ['create', 'store']]);
+        $this->middleware(['permission:Branche_update-branches'],['only' => ['edit', 'update']]);
+        $this->middleware(['permission:Branche_delete-branches'],['only' => ['destroy']]);
+    }
+
     public function index()
     {
 
