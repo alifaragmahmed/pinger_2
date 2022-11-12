@@ -6,7 +6,7 @@
     <div style=" margin-bottom: 14px; position: relative; text-align: right; ">
         <a type="button" class="btn btn-primary" href="{{ route('line-types.create') }}">@lang('Create new line type')</a>
     </div>
-    @endif  
+    @endif
     @if ($lists->count() > 0)
 
         <div class="row">
@@ -25,7 +25,7 @@
                                 @foreach ($lists as $list)
                                     <tr>
                                         <td>
-                                            <a href="{{ route('line-types.edit', $list->id) }}">
+                                            <a _href="{{ route('line-types.edit', $list->id) }}">
                                                 {{ $list->name ?? '' }}
                                             </a>
                                         </td>

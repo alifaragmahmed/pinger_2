@@ -225,6 +225,7 @@
                         <table class="table project-list-table table-nowrap align-middle table-borderless" id="branchesTable">
                             <thead>
                                 <tr style="background-color: lightgray" >
+                                    <th scope="col">@lang('Action')</th>
                                     <th scope="col">@lang('Name')</th>
                                     <th scope="col">@lang('Project')</th>
                                     <th scope="col">@lang('Sector')</th>
@@ -260,7 +261,6 @@
                                     <th scope="col" style="display: none">@lang('Notes ')</th>
                                     <th scope="col" style="display: none">@lang('IP Notes')</th>
                                     <th scope="col" style="display: none">@lang('Switch Notes')</th>
-                                    <th scope="col">@lang('Action')</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -384,6 +384,7 @@
                     "sorting": [0, 'DESC'],
                     "ajax": url,
                     "columns":[
+                    { "data": "action" },
                     { "data": "name" },
                     { "data": "project_id" },
                     { "data": "sector" },
@@ -419,7 +420,6 @@
                     { "data": "notes" },
                     { "data": "ip_notes" },
                     { "data": "switch_nots" },
-                    { "data": "action" }
                     ]
             });
         }

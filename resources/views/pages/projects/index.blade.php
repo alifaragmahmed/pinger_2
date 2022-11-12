@@ -25,7 +25,7 @@
                                 @foreach ($lists as $list)
                                     <tr>
                                         <td>
-                                            <a href="{{ route('projects.edit', $list->id) }}">
+                                            <a _href="{{ route('projects.edit', $list->id) }}">
                                                 {{ $list->name ?? '' }}
                                             </a>
                                         </td>

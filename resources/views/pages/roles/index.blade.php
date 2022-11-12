@@ -9,7 +9,7 @@
 </div>
 @endif
     <div class="row">
-        
+
         @if ($lists->count() > 0)
 
         <div class="row">
@@ -28,11 +28,11 @@
                                 @foreach ($lists as $list)
                                     <tr>
                                         <td>
-                                            <a href="{{ route('roles.edit', $list->id) }}">
+                                            <a _href="{{ route('roles.edit', $list->id) }}">
                                                 {{ $list->name ?? '' }}
                                             </a>
                                         </td>
-                                        
+
                                         <td>
                                             {{ $list->created_at }}
                                         </td>

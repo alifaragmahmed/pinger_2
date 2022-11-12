@@ -8,7 +8,7 @@
         <a type="button" class="btn btn-primary" href="{{ route('entuity-status.create') }}">@lang('Create new Entuity Status')</a>
     </div>
    @endif
-    
+
 
     @if ($lists->count() > 0)
 
@@ -28,11 +28,11 @@
                                 @foreach ($lists as $list)
                                     <tr>
                                         <td>
-                                            <a href="{{ route('entuity-status.edit', $list->id) }}">
+                                            <a _href="{{ route('entuity-status.edit', $list->id) }}">
                                                 {{ $list->name ?? '' }}
                                             </a>
                                         </td>
-                                        
+
                                         <td>
                                             {{ $list->created_at }}
                                         </td>

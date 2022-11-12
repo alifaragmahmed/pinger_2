@@ -25,11 +25,11 @@
                                 @foreach ($lists as $list)
                                     <tr>
                                         <td>
-                                            <a href="{{ route('line-capacities.edit', $list->id) }}">
+                                            <a _href="{{ route('line-capacities.edit', $list->id) }}">
                                                 {{ $list->name ?? '' }}
                                             </a>
                                         </td>
-                                        
+
                                         <td>
                                             {{ $list->created_at }}
                                         </td>
