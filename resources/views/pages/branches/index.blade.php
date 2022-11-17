@@ -34,7 +34,7 @@
         #branchesTable > tbody > tr > td:nth-child(34),
         #branchesTable > tbody > tr > td:nth-child(35)
         {
-            display: none
+            /* display: none */
         }
     </style>
 @endsection
@@ -227,40 +227,48 @@
                                 <tr style="background-color: lightgray" >
                                     <th scope="col">@lang('Action')</th>
                                     <th scope="col">@lang('Name')</th>
-                                    <th scope="col">@lang('Project')</th>
-                                    <th scope="col">@lang('Sector')</th>
                                     <th scope="col">@lang('Area')</th>
-                                    <th scope="col">@lang('Ups Installations')</th>
-                                    <th scope="col">@lang('Line Type')</th>
-                                    <th scope="col">@lang('Wan IP')</th>
-                                    <th scope="col">@lang('Lan IP')</th>
-                                    <th scope="col">@lang('Telephone')</th>
+                                    <th scope="col">@lang('Sector')</th>
                                     <th scope="col">@lang('Address')</th>
-                                    <th scope="col">@lang('Switch IP')</th>
                                     <th scope="col">@lang('Main Order ID')</th>
                                     <th scope="col">@lang('Backup Order ID')</th>
-                                    <th scope="col" style="display: none">@lang('Tunnel Ip')</th>
-                                    <th scope="col" style="display: none">@lang('Atm Ip')</th>
-                                    <th scope="col" style="display: none">@lang('Financial Code')</th>
-                                    <th scope="col" style="display: none">@lang('Post Number')</th>
-                                    <th scope="col" style="display: none">@lang('Branc Level ')</th>
-                                    <th scope="col" style="display: none">@lang('Line Capacity ')</th>
-                                    <th scope="col" style="display: none">@lang('Entuity Status ')</th>
-                                    <th scope="col" style="display: none">@lang('Additional Ips ')</th>
-                                    <th scope="col" style="display: none">@lang('Router Serial ')</th>
-                                    <th scope="col" style="display: none">@lang('Router Model ')</th>
-                                    <th scope="col" style="display: none">@lang('Switch Serial ')</th>
-                                    <th scope="col" style="display: none">@lang('Switch Model ')</th>
-                                    <th scope="col" style="display: none">@lang('Technical Support Phone')</th>
-                                    <th scope="col" style="display: none">@lang('Technical Support Name')</th>
-                                    <th scope="col" style="display: none">@lang('Branch Manager Phone')</th>
-                                    <th scope="col" style="display: none">@lang('Branch Manager Name')</th>
-                                    <th scope="col" style="display: none">@lang('Working Days')</th>
-                                    <th scope="col" style="display: none">@lang('Start Time')</th>
-                                    <th scope="col" style="display: none">@lang('End Time')</th>
-                                    <th scope="col" style="display: none">@lang('Notes ')</th>
-                                    <th scope="col" style="display: none">@lang('IP Notes')</th>
-                                    <th scope="col" style="display: none">@lang('Switch Notes')</th>
+                                    <th scope="col">@lang('Project')</th>
+                                    <th scope="col">@lang('Wan IP')</th>
+                                    <th scope="col">@lang('Tunnel Ip')</th>
+                                    <th scope="col">@lang('Lan IP')</th>
+                                    <th scope="col">@lang('Additional Ips ')</th>
+                                    <th scope="col">@lang('IP Notes')</th>
+                                    <th scope="col">@lang('Notes ')</th>
+                                    <th scope="col">@lang('Network ')</th>
+                                    <th scope="col">@lang('Line Type')</th>
+                                    <th scope="col">@lang('Line Capacity ')</th>
+                                    <th scope="col">@lang('Technical Support Name')</th>
+                                    <th scope="col">@lang('Technical Support Phone')</th>
+                                    <th scope="col">@lang('Branch Manager Name')</th>
+                                    <th scope="col">@lang('Branch Manager Phone')</th>
+                                    <th scope="col">@lang('Telephone')</th>
+                                    <th scope="col">@lang('Viop No')</th>
+                                    <th scope="col">@lang('Branc Level ')</th>
+                                    <th scope="col">@lang('Working Days')</th>
+                                    <th scope="col">@lang('Start Time')</th>
+                                    <th scope="col">@lang('End Time')</th>
+                                    <th scope="col">@lang('Financial Code')</th>
+                                    <th scope="col">@lang('Post Number')</th>
+                                    <th scope="col">@lang('Modeling')</th>
+                                    <th scope="col">@lang('Ups Installations')</th>
+                                    <th scope="col">@lang('Entuity Status ')</th>
+                                    <th scope="col">@lang('Add On Entuity ')</th>
+                                    <th scope="col">@lang('Router Serial ')</th>
+                                    <th scope="col">@lang('Router Model ')</th>
+                                    <th scope="col">@lang('Entuity System Name ')</th>
+                                    <th scope="col">@lang('Switch Serial ')</th>
+                                    <th scope="col">@lang('Switch Model ')</th>
+                                    <th scope="col">@lang('Switch IP')</th>
+                                    <th scope="col">@lang('Switch Notes')</th>
+                                    <th scope="col">@lang('Atm Exists')</th>
+                                    <th scope="col">@lang('Atm Ip')</th>
+                                    <th scope="col">@lang('Installation And Commissioning')</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -386,40 +394,48 @@
                     "columns":[
                     { "data": "action" },
                     { "data": "name" },
-                    { "data": "project_id" },
-                    { "data": "sector" },
                     { "data": "area" },
-                    { "data": "ups_installation_id" },
-                    { "data": "line_type_id" },
-                    { "data": "wan_ip" },
-                    { "data": "lan_ip" },
-                    { "data": "telephone" },
+                    { "data": "sector" },
                     { "data": "address" },
-                    { "data": "switch_ip" },
                     { "data": "main_order_id" },
                     { "data": "backup_order_id" },
+                    { "data": "project_id" },
+                    { "data": "wan_ip" },
                     { "data": "tunnel_ip" },
-                    { "data": "atm_ip" },
-                    { "data": "financial_code" },
-                    { "data": "post_number" },
-                    { "data": "brance_level_id" },
-                    { "data": "line_capacity_id" },
-                    { "data": "entuity_status_id" },
+                    { "data": "lan_ip" },
                     { "data": "additional_ips" },
-                    { "data": "router_serial" },
-                    { "data": "router_model_id" },
-                    { "data": "switch_serial" },
-                    { "data": "switch_model_id" },
-                    { "data": "technical_support_phone" },
+                    { "data": "ip_notes" },
+                    { "data": "notes" },
+                    { "data": "network_id" },
+                    { "data": "line_type_id" },
+                    { "data": "line_capacity_id" },
                     { "data": "technical_support_name" },
-                    { "data": "branch_manager_phone" },
+                    { "data": "technical_support_phone" },
                     { "data": "branch_manager_name" },
+                    { "data": "branch_manager_phone" },
+                    { "data": "telephone" },
+                    { "data": "viop_no" },
+                    { "data": "brance_level_id" },
                     { "data": "working_days" },
                     { "data": "start_time" },
                     { "data": "end_time" },
-                    { "data": "notes" },
-                    { "data": "ip_notes" },
+                    { "data": "financial_code" },
+                    { "data": "post_number" },
+                    { "data": "modeling" },
+                    { "data": "ups_installation_id" },
+                    { "data": "entuity_status_id" },
+                    { "data": "added_on_entuity" },
+                    { "data": "router_serial" },
+                    { "data": "router_model_id" },
+                    { "data": "entuity_systemname" },
+                    { "data": "switch_serial" },
+                    { "data": "switch_model_id" },
+                    { "data": "switch_ip" },
                     { "data": "switch_nots" },
+                    { "data": "atm_exists" },
+                    { "data": "atm_ip" },
+                    { "data": "installation_and_commissioning" },
+
                     ]
             });
         }

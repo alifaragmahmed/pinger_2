@@ -446,6 +446,9 @@ class BranchesController extends Controller
                         ->editColumn('project_id', function(Branch $branch) {
                             return optional($branch->project)->name;
                         })
+                        ->editColumn('network_id', function(Branch $branch) {
+                            return optional($branch->network)->name;
+                        })
                         ->editColumn('ups_installation_id', function(Branch $branch) {
                             return optional($branch->upsInstallation)->name;
                         })

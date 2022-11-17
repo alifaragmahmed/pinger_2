@@ -70,6 +70,7 @@ class Branch extends Model
     }
 
 
+
     public function routerName(){
         return $this->belongsTo(Router::class, 'router_model_id' );
     }
